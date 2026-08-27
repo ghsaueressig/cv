@@ -2,25 +2,15 @@
 
 Currículo profissional desenvolvido como uma aplicação web estática utilizando **HTML5 e CSS3**, com foco em apresentar informações profissionais, acadêmicas e técnicas de forma simples, responsiva e acessível.
 
-O projeto também funciona como um exemplo prático de desenvolvimento front-end e pode ser utilizado como base para a criação de outros currículos ou portfólios pessoais.
+O projeto também funciona como um exemplo prático de desenvolvimento front-end e é publicado utilizando o GitHub Pages.
 
 ## Sobre o projeto
 
 Este repositório contém a implementação do meu currículo em formato de página web.
 
-A proposta é substituir um currículo exclusivamente em formato de documento por uma página que possa ser acessada diretamente pelo navegador, compartilhada através de um link e publicada gratuitamente utilizando o GitHub Pages.
+A proposta é disponibilizar as informações profissionais e acadêmicas através de uma página que possa ser acessada diretamente pelo navegador e compartilhada através de um único link.
 
-O projeto foi desenvolvido buscando manter uma estrutura simples, sem a necessidade de frameworks ou bibliotecas JavaScript, tornando o código fácil de entender, modificar e manter.
-
-Atualmente, o currículo apresenta informações sobre:
-
-* Perfil profissional;
-* Experiência profissional;
-* Formação acadêmica;
-* Reconhecimentos e prêmios;
-* Idiomas;
-* Competências e tecnologias;
-* Links para perfis profissionais e organizações relacionadas às experiências.
+O projeto utiliza tecnologias web fundamentais, mantendo uma estrutura simples e sem dependências de frameworks front-end.
 
 ---
 
@@ -28,78 +18,78 @@ Atualmente, o currículo apresenta informações sobre:
 
 ### Currículo em formato web
 
-Todo o conteúdo do currículo é apresentado em uma única página HTML, organizada em diferentes seções.
+As informações do currículo são organizadas em uma única página, incluindo:
 
-A estrutura atual contempla:
+* Informações pessoais;
+* Experiência profissional;
+* Formação acadêmica;
+* Reconhecimentos e prêmios;
+* Idiomas;
+* Competências;
+* Links profissionais.
 
-* **Informações pessoais**
-* **Experiência profissional**
-* **Educação**
-* **Reconhecimentos e prêmios**
-* **Idiomas**
-* **Links profissionais**
+### Modo claro e modo escuro
 
-Essa organização permite que o visitante encontre rapidamente as principais informações sobre formação e experiência.
+O currículo possui um botão para alternar entre **modo claro** e **modo escuro**.
+
+A troca de tema é realizada através de JavaScript e CSS, sem a utilização de bibliotecas externas.
+
+O tema selecionado também é armazenado no `localStorage` do navegador.
+
+Dessa forma, a preferência do usuário é mantida mesmo depois que a página é fechada e aberta novamente.
+
+A lógica responsável pela funcionalidade está separada no arquivo:
+
+```text
+script.js
+```
+
+Enquanto as características visuais dos dois temas são definidas em:
+
+```text
+styles.css
+```
 
 ### Design responsivo
 
-A página possui regras de CSS específicas para dispositivos com telas menores.
+A página possui regras de CSS para adaptação a diferentes tamanhos de tela.
 
-Em telas reduzidas, elementos como os ícones das redes sociais são redimensionados para preservar a organização e a legibilidade do conteúdo.
-
-O objetivo é permitir que o currículo seja consultado tanto em computadores quanto em dispositivos móveis.
+O objetivo é permitir a consulta do currículo em computadores, tablets e dispositivos móveis.
 
 ### Links externos
 
-As experiências profissionais e instituições de ensino possuem links para seus respectivos sites ou páginas.
+O currículo possui links para perfis profissionais, organizações e instituições relacionadas às experiências apresentadas.
 
-Também estão disponíveis links diretos para:
+### Identidade visual
 
-* GitHub
-* LinkedIn
-* Organizações relacionadas às experiências profissionais
-* Instituições de ensino
+As experiências profissionais e instituições de ensino podem ser acompanhadas por seus respectivos logotipos.
 
-Isso permite que o visitante navegue diretamente para outras fontes de informação.
+### Publicação online
 
-### Identidade visual das organizações
-
-As experiências profissionais e instituições de ensino são acompanhadas por seus respectivos logotipos.
-
-Além de melhorar a identificação visual, isso permite diferenciar rapidamente as diferentes organizações apresentadas no currículo.
-
-### Preparação para impressão
-
-A estrutura do currículo foi pensada para que o conteúdo possa ser utilizado também como documento impresso ou convertido para PDF através das funcionalidades de impressão do navegador.
-
-Dessa forma, a mesma fonte de informação pode ser utilizada tanto como currículo online quanto como documento tradicional.
+O projeto pode ser publicado diretamente como um site estático através do GitHub Pages.
 
 ---
 
 ## Tecnologias utilizadas
 
-| Tecnologia       | Utilização                                   |
-| ---------------- | -------------------------------------------- |
-| **HTML5**        | Estrutura e conteúdo da página               |
-| **CSS3**         | Estilização, layout e responsividade         |
-| **Google Fonts** | Fonte utilizada na apresentação do currículo |
-| **GitHub Pages** | Hospedagem da versão online                  |
-| **Git/GitHub**   | Versionamento e publicação do projeto        |
-
-O projeto atualmente não depende de frameworks como React, Vue ou Angular, nem de um back-end ou banco de dados.
-
-Essa abordagem mantém a aplicação leve e adequada para hospedagem como site estático.
+| Tecnologia       | Utilização                                  |
+| ---------------- | ------------------------------------------- |
+| **HTML5**        | Estrutura e conteúdo da página              |
+| **CSS3**         | Estilização, layout, responsividade e temas |
+| **JavaScript**   | Alternância e persistência do tema          |
+| **LocalStorage** | Armazenamento da preferência de tema        |
+| **Git/GitHub**   | Versionamento e hospedagem do código        |
+| **GitHub Pages** | Publicação do currículo online              |
 
 ---
 
 ## Estrutura do projeto
 
-A estrutura principal do repositório é composta por:
-
 ```text
 cv/
 ├── index.html
 ├── styles.css
+├── script.js
 ├── README.md
 ├── LinkedIn_icon.svg.png
 ├── Logo_CompassoUOL_Positivo.png
@@ -112,235 +102,143 @@ cv/
 
 ### `index.html`
 
-É o arquivo principal da aplicação.
+Arquivo principal da aplicação.
 
-Contém a estrutura HTML do currículo e as informações apresentadas ao visitante, incluindo experiências profissionais, formação acadêmica, reconhecimentos e idiomas.
+Contém a estrutura e o conteúdo do currículo.
 
 ### `styles.css`
 
-Arquivo responsável pela estilização da página.
+Responsável pela aparência da página, incluindo:
 
-Entre suas responsabilidades estão:
-
+* Layout;
 * Tipografia;
 * Cores;
-* Espaçamento;
-* Alinhamento dos elementos;
-* Estilização dos links;
-* Organização dos ícones;
-* Adaptação para telas menores.
+* Responsividade;
+* Modo claro;
+* Modo escuro;
+* Estilização do botão de tema.
+
+### `script.js`
+
+Contém a lógica JavaScript utilizada para alternar entre os temas.
+
+Também utiliza o `localStorage` para armazenar a preferência do usuário.
 
 ### Imagens
 
-O repositório contém imagens utilizadas principalmente para representar:
-
-* Organizações;
-* Instituições de ensino;
-* Redes profissionais.
-
-Esses arquivos são utilizados diretamente pela página HTML.
+Os arquivos de imagem são utilizados principalmente para representar organizações e instituições relacionadas ao currículo.
 
 ---
 
-## Organização do conteúdo
+## Funcionamento do modo escuro
 
-O currículo é dividido em seções para facilitar a leitura.
+A funcionalidade utiliza uma classe CSS aplicada ao elemento `<body>`.
 
-### Experiência profissional
+No modo claro:
 
-Apresenta as experiências profissionais e acadêmicas relacionadas ao desenvolvimento de software, tecnologia, educação e outras atividades.
+```text
+<body>
+```
 
-Cada experiência pode apresentar:
+No modo escuro:
 
-* Organização;
-* Cargo ou função;
-* Tipo de vínculo;
-* Período;
-* Localização;
-* Descrição das atividades;
-* Competências relacionadas;
-* Link para a organização.
+```text
+<body class="dark-mode">
+```
 
-### Educação
+O JavaScript é responsável por alternar essa classe quando o usuário pressiona o botão.
 
-Apresenta a formação acadêmica, incluindo cursos concluídos, cursos transferidos e formação atualmente em andamento.
+O CSS então utiliza essa classe para alterar as características visuais da página.
 
-### Reconhecimentos e prêmios
+O tema escolhido é armazenado no navegador:
 
-Seção destinada à apresentação de premiações e reconhecimentos acadêmicos.
+```javascript
+localStorage.setItem("theme", "dark");
+```
 
-### Idiomas
-
-Apresenta os idiomas e respectivos níveis de proficiência.
+Quando a página é carregada novamente, o `script.js` verifica essa informação e restaura automaticamente o tema escolhido.
 
 ---
 
 ## Como executar localmente
 
-Por ser uma aplicação web estática, não é necessário instalar dependências ou configurar um servidor para visualizar o projeto.
+Por ser uma aplicação web estática, não são necessárias dependências ou configurações de servidor.
 
-### 1. Clonar o repositório
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/ghsaueressig/cv.git
 ```
 
-### 2. Entrar no diretório
+### 2. Entre no diretório
 
 ```bash
 cd cv
 ```
 
-### 3. Abrir o projeto
+### 3. Abra o projeto
 
-Abra o arquivo `index.html` diretamente no navegador.
+Abra o arquivo `index.html` no navegador.
 
-Também é possível utilizar uma extensão como **Live Server** no Visual Studio Code para executar o projeto durante o desenvolvimento.
+Durante o desenvolvimento, também é possível utilizar uma extensão como **Live Server** no Visual Studio Code.
 
 ---
 
 ## Como personalizar
 
-O projeto pode ser facilmente adaptado para outros currículos.
+### Informações
 
-### Alterando informações
-
-As informações apresentadas na página podem ser modificadas diretamente no:
+As informações do currículo podem ser alteradas no:
 
 ```text
 index.html
 ```
 
-É possível alterar:
+### Aparência
 
-* Nome;
-* Informações pessoais;
-* Contato;
-* Experiências;
-* Formação;
-* Competências;
-* Idiomas;
-* Reconhecimentos;
-* Links externos.
-
-### Alterando a aparência
-
-As principais características visuais podem ser modificadas no:
+As características visuais podem ser alteradas no:
 
 ```text
 styles.css
 ```
 
-Por exemplo:
+### Comportamento
 
-```css
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
+A lógica do modo escuro e outras funcionalidades JavaScript pode ser implementada no:
+
+```text
+script.js
 ```
-
-A partir desse arquivo é possível alterar cores, fontes, tamanhos, espaçamentos e regras de responsividade.
-
-### Adicionando uma nova experiência
-
-Uma nova experiência pode ser adicionada seguindo a estrutura das experiências existentes no `index.html`.
-
-De maneira geral, cada entrada contém:
-
-```html
-<div>
-    <p class="aligned-content">
-        <strong>Organização · Cargo</strong>
-    </p>
-
-    <p>Período · Localização</p>
-
-    <p>
-        Descrição das atividades realizadas.
-    </p>
-
-    <p>
-        <strong>Competências:</strong>
-        Tecnologia 1 · Tecnologia 2 · Tecnologia 3
-    </p>
-</div>
-```
-
-Isso permite manter um padrão visual consistente entre as diferentes experiências.
-
----
-
-## Publicação
-
-O projeto pode ser publicado como um site estático utilizando o **GitHub Pages**.
-
-Após disponibilizar os arquivos no repositório, o GitHub Pages pode servir o `index.html` diretamente como página inicial.
-
-A versão atualmente publicada está disponível em:
-
-**https://ghsaueressig.github.io/cv/**
-
----
-
-## Características do projeto
-
-| Característica            | Status                    |
-| ------------------------- | ------------------------- |
-| HTML5                     | Implementado              |
-| CSS3                      | Implementado              |
-| Layout responsivo         | Implementado              |
-| Links externos            | Implementado              |
-| Ícones e logotipos        | Implementado              |
-| Estrutura em página única | Implementado              |
-| Hospedagem estática       | Implementado              |
-| GitHub Pages              | Implementado              |
-| JavaScript                | Não necessário atualmente |
-| Back-end                  | Não utilizado             |
-| Banco de dados            | Não utilizado             |
 
 ---
 
 ## Objetivos do projeto
 
-Além de servir como currículo profissional, o projeto possui objetivos de aprendizado e demonstração de conhecimentos em desenvolvimento web.
+Além de funcionar como currículo profissional, o projeto serve como uma aplicação prática para demonstrar conhecimentos em desenvolvimento web.
 
-Entre eles:
+Entre os objetivos estão:
 
-* Praticar desenvolvimento com HTML e CSS;
-* Aplicar conceitos de design responsivo;
-* Organizar informações em uma interface web;
-* Utilizar versionamento com Git;
-* Publicar uma aplicação estática através do GitHub Pages;
-* Manter uma página profissional acessível através de um endereço web;
-* Utilizar o próprio projeto como demonstração prática de conhecimentos de desenvolvimento front-end.
+* Praticar HTML e CSS;
+* Praticar JavaScript;
+* Aplicar conceitos de responsividade;
+* Implementar alternância de temas;
+* Trabalhar com `localStorage`;
+* Utilizar Git e GitHub;
+* Publicar uma aplicação estática utilizando GitHub Pages;
+* Manter um currículo profissional acessível através da web.
 
 ---
 
 ## Possíveis melhorias futuras
 
-Algumas funcionalidades podem ser incorporadas futuramente, caso façam sentido para o projeto:
-
-* [ ] Separar completamente conteúdo e estilos;
-* [ ] Adicionar modo claro/escuro;
-* [ ] Melhorar a experiência em dispositivos móveis;
+* [ ] Melhorar a acessibilidade;
 * [ ] Adicionar uma seção de projetos;
 * [ ] Adicionar links para projetos relevantes do GitHub;
 * [ ] Criar uma versão específica para impressão;
 * [ ] Adicionar suporte a múltiplos idiomas;
-* [ ] Melhorar acessibilidade e semântica HTML;
-* [ ] Adicionar metadados para SEO;
-* [ ] Automatizar a geração de uma versão PDF;
-* [ ] Adicionar testes de acessibilidade e compatibilidade entre navegadores.
-
----
-
-## Licença
-
-Este projeto é disponibilizado para fins pessoais, acadêmicos e de demonstração.
-
-Consulte o arquivo [`LICENSE`](LICENSE), caso uma licença específica seja adicionada ao projeto.
+* [ ] Melhorar SEO;
+* [ ] Adicionar animações sutis;
+* [ ] Automatizar a geração de uma versão PDF.
 
 ---
 
@@ -348,12 +246,15 @@ Consulte o arquivo [`LICENSE`](LICENSE), caso uma licença específica seja adic
 
 **Guilherme Henke Saueressig**
 
-Estudante de Ciência da Computação e desenvolvedor de software com interesse em desenvolvimento web, inteligência artificial e tecnologia.
+Estudante de Ciência da Computação com experiência em desenvolvimento de software.
 
-* GitHub: [@ghsaueressig](https://github.com/ghsaueressig)
-* LinkedIn: [Guilherme Henke Saueressig](https://www.linkedin.com/in/guilhermehsaueressig)
+* GitHub: https://github.com/ghsaueressig
+* LinkedIn: https://www.linkedin.com/
 
 ---
 
-**Currículo online:**
-https://ghsaueressig.github.io/cv/
+## Licença
+
+Este projeto é disponibilizado para fins pessoais, acadêmicos e de demonstração.
+
+Consulte o arquivo `LICENSE`, caso uma licença específica seja adicionada ao projeto.
