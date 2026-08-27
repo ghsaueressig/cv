@@ -72,7 +72,22 @@
         }
     </style>
 </head>
+<script>
+    const button = document.getElementById("theme-toggle");
+    button.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            button.textContent = "Modo claro";
+        } else {
+            button.textContent = "Modo escuro";
+        }
+    });
+</script>
 <body>
+    <button id="theme-toggle" type="button">
+        Modo escuro
+    </button>
     <header>
         <h1><b>GUILHERME HENKE SAUERESSIG</b></h1>
         <p>24 anos, natural de Santa Rosa · Rio Grande do Sul.</p>
