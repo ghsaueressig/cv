@@ -4,16 +4,6 @@ Currículo profissional desenvolvido como uma aplicação web estática utilizan
 
 O projeto também funciona como um exemplo prático de desenvolvimento front-end e pode ser utilizado como base para a criação de outros currículos ou portfólios pessoais.
 
-## Acesso
-
-**Currículo online:**
-https://ghsaueressig.github.io/cv/
-
-**Repositório:**
-https://github.com/ghsaueressig/cv
-
----
-
 ## Sobre o projeto
 
 Este repositório contém a implementação do meu currículo em formato de página web.
